@@ -34,7 +34,7 @@ Thanks To:
 
 
 
-The Support group can be reached out to at [Tangent](https://t.me/TangentChats), where you can ask for help about [Emilia](https://t.me/EmiliaAnimeRobot), discover/request new features, report bugs, and stay in the loop whenever a new update is available. 
+The Support group [✗PigasusSupport](https://t.me/pigasusSupport), where you can ask for help about [❤️Yumi](https://t.me/yumi_robot), discover/request new features, report bugs, and stay in the loop whenever a new update is available. 
 
 <details>
 	<summary>Heroku Deploy</summary>
@@ -45,7 +45,7 @@ The Easiest Way to Deploy This Bot is Via Heroku.
 	
   <h1>
     <p align="center">
-        <a href="https://heroku.com/deploy?template=https://github.com/IzumiCypherX/EmiliaAnimeBot">
+        <a href="https://heroku.com/deploy?template=https://github.com/ctzfamily/yumi_robot">
             <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
         </a>
     </p>
