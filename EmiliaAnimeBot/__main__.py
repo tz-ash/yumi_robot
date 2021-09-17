@@ -21,7 +21,7 @@ from telegram.ext import (CallbackContext, CallbackQueryHandler, CommandHandler,
 from telegram.ext.dispatcher import DispatcherHandlerStop, run_async
 from telegram.utils.helpers import escape_markdown
 
-EMILIA_IMG = "https://telegra.ph/file/ecbbd41d6a85e944de587.jpg"
+EMILIA_IMG = "https://telegra.ph/file/b37cec509d121c8c63518.jpg"
 
 
 def get_readable_time(seconds: int) -> str:
@@ -54,16 +54,16 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-`Hey There!` [👸](https://telegra.ph/file/ecbbd41d6a85e944de587.jpg) 
-`My name is` *❤️ ʏᴜᴍɪ ❤️*`
-`I am ❤️ ʏᴜᴍɪ ❤️group management bot.`
-You can find my list of available commands with` /help. *🔐Commands*   
+`Hey There!` [👩‍💼](https://telegra.ph/file/c766d686089a43e0ff33a.jpg) 
+`My name is` *Emilia*`
+`I am an Anime Themed group management bot.`
+You can find my list of available commands with` *🔐Commands*   
 """
 
 buttons = [
     [
         InlineKeyboardButton(
-            text="【✗ᴀᴅᴅ ʏᴜᴍɪ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ✗ 】",url="t.me/yumi_RoBot?startgroup=true"
+            text="➕️ ADD EMILIA TO YOUR GROUP ➕️",url="t.me/EmiliaAnimeRoBot?startgroup=true"
         ),
     ],
     [
@@ -73,22 +73,22 @@ buttons = [
     ],
     [
         InlineKeyboardButton(
-          text="【 ✗Uᴘᴅᴀᴛᴇs✗ 】", url="https://t.me/pigasusUpdates"
+          text="📮 Updates", url="https://t.me/TangentXOfficial"
         ),
       
         InlineKeyboardButton(
-          text="【✗Sᴜᴘᴘᴏʀᴛ✗ ]", url="https://t.me/pigasusSupport"
+          text="📑 Logs", url="https://t.me/tangentlogger"
         ),
     ],
          
     [
        InlineKeyboardButton(
-           text="【 😈Vᴇɢᴇᴛᴀ😈 】", url="https://t.me/VEGETAROBOT"
+           text="🐱 Support", url="https://t.me/TangentChats"
          ),
     ],
     [
         InlineKeyboardButton(
-          text="【 ✗Cʀᴇᴀᴛᴇʀ✗ 】", url="https://t.me/ctzfamily"
+          text="✒ Source", callback_data="source_"
         ),
      
     ],
@@ -96,12 +96,12 @@ buttons = [
 
 
 HELP_STRINGS = """
-`Hey there! My name is` [❤️ʏᴜᴍɪ!]("https://telegra.ph/file/ecbbd41d6a85e944de587.jpg") 
+`Hey there! My name is` [Emilia!](https://telegra.ph/file/e5fc94ada18369f89c832.jpg) 
 I'm a Half Elf and help admins manage their groups with Some Powerful Features! \n`Have a look at the following for an idea of some of the things I can help you with.`"""
 
 DONATE_STRING = """
 Heya, glad to hear you want to donate!
-I'd Like you to Donate that Money to @ctzfamily. 
+I'd Like you to Donate that Money to Some Charity. 
 Thanks!
 """
 
@@ -213,17 +213,17 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_photo(
-            EMILIA_IMG, caption= "ʏᴇᴀ ❤️ʏᴜᴍɪ ʀᴇᴀᴅʏ ᴡʜᴀᴛ ɪ ᴅᴏ❤\nI am Awake Since: <code>{}</code>".format(
+            EMILIA_IMG, caption= "<code>Emilia is Here For You❤\nI am Awake Since</code>: <code>{}</code>".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
                   [
-                  InlineKeyboardButton(text="【 ✗Sᴜᴘᴘᴏʀᴛ✗ 】", url="https://t.me/pigasusSupport")
+                  InlineKeyboardButton(text="Sᴜᴘᴘᴏʀᴛ", url="https://telegram.dog/TangentChats")
                   ],
                   [
-                  InlineKeyboardButton(text="【 ✗Cʀᴇᴀᴛᴇʀ✗ 】", url="https://t.me/ctzfamily
+                  InlineKeyboardButton(text="Sᴏᴜʀᴄᴇ", url="https://github.com/IzumiCypherX/EmiliaAnimeBot")
                   ]
                 ]
             ),
@@ -357,14 +357,14 @@ def gabi_about_callback(update, context):
     query = update.callback_query
     if query.data == "gabi_":
         query.message.edit_text(
-            text=""" ℹ️ I'm *❤️ʏᴜᴍɪ*, a powerful group management bot built to help you manage your group easily.
+            text=""" ℹ️ I'm *Emilia*, a powerful group management bot built to help you manage your group easily.
                  \n❍ I can restrict users.
                  \n❍ I can greet users with customizable welcome messages and even set a group's rules.
                  \n❍ I have an advanced anti-flood system.
                  \n❍ I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc.
                  \n❍ I have a note keeping system, blacklists, and even predetermined replies on certain keywords.
                  \n❍ I check for admins' permissions before executing any command and more stuffs
-                 \n\nIf you have any question about *❤️ʏᴜᴍɪ*, let us know at .""",
+                 \n\nIf you have any question about *Emilia*, let us know at .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -390,8 +390,8 @@ def Source_about_callback(update, context):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text=""" Hi..👩‍💼 I'm *❤️ʏᴜᴍɪ*
-                 \nMy Source Code Can be Found at Github at this [Link](https://github.com/ctzfamily/yumi_robot""",
+            text=""" Hi..👩‍💼 I'm *Emilia*
+                 \nMy Source Code Can be Found at Github at this [Link](https://github.com/IzumiCypherX/EmiliaAnimeBot""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -751,5 +751,4 @@ def main():
 if __name__ == '__main__':
     LOGGER.info("Successfully loaded modules: " + str(ALL_MODULES))
     telethn.start(bot_token=TOKEN)
-    pgram.start()
     main()
