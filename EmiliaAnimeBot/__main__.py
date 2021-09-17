@@ -51,8 +51,10 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-Hi {}, my name is {}! 
-I am an Anime themed group management bot. I will use my angel Zafkiel and protect your group. You can find my list of available commands with /help.
+`𝗛𝗮𝗶 {}`
+`𝗜𝗺 {} 𝗕𝗼𝘁!`
+`𝗬𝗼𝘂 𝗰𝗮𝗻 𝗲𝗮𝘀𝗶𝗹𝘆 𝗳𝗶𝗻𝗱 𝗮𝗻𝘆 𝗧𝗲𝗹𝗲𝗴𝗿𝗮𝗺 𝗯𝗼𝘁𝘀.`
+`𝗠𝗮𝗱𝗲 𝗕𝘆 @AASFCYBERKING 𝗙𝗼𝗿 @PigasusUpdates`
 """
 
 HELP_STRINGS = """
