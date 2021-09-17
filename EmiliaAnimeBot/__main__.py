@@ -193,9 +193,7 @@ def start(update: Update, context: CallbackContext):
                 reply_markup=InlineKeyboardMarkup(
                     [[
                         InlineKeyboardButton(
-                            text="☑️ Add Kurumi Chan to your group",
-                            url="t.me/{}?startgroup=true".format(
-                                context.bot.username))
+                            text="Telegram Bots", callback_data="source_"
                     ],
                      [
                          InlineKeyboardButton(
@@ -251,6 +249,32 @@ def error_callback(update: Update, context: CallbackContext):
     except TelegramError:
         print(error)
         # handle all other telegram related errors
+
+@run_async
+def Source_about_callback(update, context):
+    query = update.callback_query
+    if query.data == "source_":
+        query.message.edit_text(
+            text=""" Hi..👩‍💼 I'm *Emilia*
+                 \nMy Source Code Can be Found at Github at this [Link](https://github.com/IzumiCypherX/EmiliaAnimeBot""",
+            parse_mode=ParseMode.MARKDOWN,
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                 [
+                    InlineKeyboardButton(text="Go Back", callback_data="asuna_back")
+                 ]
+                ]
+            ),
+        )
+    elif query.data == "asuna_back":
+        query.message.edit_text(
+                PM_START_TEXT,
+                reply_markup=InlineKeyboardMarkup(buttons),
+                parse_mode=ParseMode.MARKDOWN,
+                timeout=60,
+                disable_web_page_preview=False,
+        )
 
 
 @run_async
